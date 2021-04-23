@@ -1,0 +1,537 @@
+{% extends 'base.html' %}
+{% block title %}CSS{% endblock title %}
+
+<!-- Favicon -->
+{% block fav_ico %}
+<link rel="shortcut icon" href="{{ url_for('static', filename='images/css-3.svg') }}" type="image/x-icon">
+{% endblock fav_ico %}
+
+<!-- Stylesheet  -->
+{% block ex_stylesheet %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/all-lang.css') }}">
+{% endblock ex_stylesheet %}
+{% block body %}
+
+
+
+<div id="main_content">
+
+    <!-- INDEX -->
+    <details>
+        <summary class="sum-ind">
+            <h2 id="index">INDEX:</h2>
+            <span id="click-here">
+                <img src="{{ url_for('static', filename='images/mouse_black_24dp.svg') }}" alt="click here">
+                <span class="ico-des">HERE</span>
+            </span>
+        </summary>
+        <hr class="index-ruler">
+        <ul class="index">
+            <li><a href="#id-cls-selector">Id and Class Selector</a></li>
+            <li><a href="#fonts">About Fonts</a></li>
+            <li><a href="#colors-css">Colors</a></li>
+            <li><a href="#border-background">Borders &amp; Backgrounds</a></li>
+            <li><a href="#box-model-mp">Box Model, Margin &amp; Padding</a></li>
+            <li><a href="#float-clear">Float &amp; Clear</a></li>
+            <li><a href="#sty-link-btn">Styling Links &amp; Buttons</a></li>
+        </ul>
+    </details>
+
+    <ol class="main_content">
+        <!-- Id and Class Selector -->
+        <hr>
+        <li>
+            <div id="id-cls-selector" class="heading">Id and Class Selector</div>
+            <div class="discription">
+                <em>
+                    In CSS elements can be selected by its <em>ID</em>, <em>Class</em> or it structural design like-
+                </em>
+                <ul>
+                    <li>
+                        <div class="subheading">By Class</div>
+                        <pre><code class="language-css">.first-para{
+    background-color: blanchedalmond;
+}</code></pre>
+                    </li>
+                    <li>
+                        <div class="subheading">By Id</div>
+                        <pre><code class="language-css">#first-para{
+    background-color: rgb(26, 194, 194);
+}</code></pre>
+                    </li>
+                    <li>
+                        <div class="subheading">By Structure</div>
+                        <pre><code class="language-css">body div a, body img{
+    background-color: rgb(209, 133, 18);
+}</code></pre>
+                    </li>
+                </ul>
+
+            </div>
+        </li>
+
+        <!-- fonts -->
+        <hr>
+        <li>
+            <div id="fonts" class="heading">Font Style</div>
+            <div class="discription">
+                <ul>
+                    <li>
+                        <p>
+                            We can use the technique of <em>font stack.</em> A font stack is a list of fonts that are
+                            listed in order of preference you would like them to appear in case some fonts are not
+                            loading. The example of this is shown below-
+                        </p>
+                        <pre><code class="language-css">p {font-family:'Ubuntu', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}</code></pre>
+                        <p>
+                            This list will be iterated until the specified font is not available in the system.
+                        </p>
+                        <p>
+                            To import the code, there is no website better than <a href="https://fonts.google.com/"
+                                target="_blank">Google Fonts</a> To use it, simply copy the style-sheet and add it to
+                            your code and update the font stack with the specific font you desire.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Font Size is used to set the size of a font. In the above example, we used our font size to
+                            be 33px. Pixel 'px' is the unit of the font size and it is 1/96th of an inch.
+                        </p>
+                        <pre><code class="language-css">p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 36px;
+}</code></pre>
+                    </li>
+                    <li>
+                        <p>
+                            Line-height is the spacing between the fonts (current font and previous font).
+                        </p>
+                        <pre><code class="language-css">p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 36px;
+    line-height: 1.5rem;
+}</code></pre>
+                    </li>
+                    <li>
+                        <p>
+                            The font weight property sets how thick or thin character in text should be displayed.
+                        </p>
+                        <pre><code class="language-css">p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 36px;
+    line-height: 1.5rem;
+    font-weight: 600; /* or bold, bolder, light, lighter and 100-900*/
+}</code></pre>
+                    </li>
+                    <li>
+                        <p>
+                            There are various other font properties. You can try it using <em>emmet</em>.
+                        </p>
+                    </li>
+                </ul>
+                <a href="https://www.w3schools.com/cssref/pr_font_font.asp" class="refer-btn">Refer here&rarr;</a>
+            </div>
+        </li>
+
+        <!-- colors in css  -->
+        <hr>
+        <li>
+            <div class="heading" id="colors-css">Colors</div>
+            <div class="discription">
+                <ol>
+                    <li>
+                        <p>
+                            By Writing color name-
+                        </p>
+                        <pre><code class="language-css">#first-para{
+    color: sandybrown;
+}</code></pre>
+                    </li>
+                    <li>
+                        <p>
+                            By Writing hex value-
+                        </p>
+                        <pre><code class="language-css">#second-para{
+    color: #f4a460;&nbsp;&nbsp;&nbsp;&nbsp;/* sandybrown */
+}</code></pre>
+                    </li>
+                    <li>
+                        <p>
+                            By Writing <em>rgb</em> value-
+                        </p>
+                        <pre><code class="language-css">#third-para{
+    color: rgb(244, 164, 96);&nbsp;&nbsp;&nbsp;&nbsp;/* sandybrown */
+}</code></pre>
+                    </li>
+                    <li>
+                        <p>
+                            By Writing <em>rgba</em> value-
+                        </p>
+                        <pre><code class="language-css">#fourth-para{
+    color: rgba(244, 165, 96, 0.63);&nbsp;&nbsp;&nbsp;&nbsp;/* sandybrown */
+}</code></pre>
+                    </li>
+                </ol>
+            </div>
+        </li>
+
+        <!-- Borders and Backgrounds -->
+        <hr>
+        <li>
+            <div class="heading" id="border-background">Borders and Backgrounds</div>
+            <div class="discription">
+                <div class="subheading">Border Properties</div>
+                <ol>
+                    <li>
+                        <p>
+                            <strong>border-width: ;</strong> Specifies the width of border of object.
+                        </p>
+                        <pre><code class="language-css">border-width: 12px;</code></pre>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>border-style: ;</strong> Specifies the style of border of object.
+                        </p>
+                        <pre><code class="language-css">border-style: solid; /* dashed, dotted, double, groove, outset, ridge, solid */</code></pre>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>border-color: ;</strong> Specifies the color of border of object.
+                        </p>
+                        <pre><code class="language-css">border-color: black;</code></pre>
+                    </li>
+                    <li>
+                        <p>
+                            <em>Shorthand: </em><strong>border: ;</strong> Specifies the width, style, color of border
+                            of object.
+                        </p>
+                        <pre><code class="language-css">border: 2px solid black;</code></pre>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>border-radius: ;</strong> Specifies the corner radius of border of object.
+                        </p>
+                        <pre><code class="language-css">border-radius: 10px;</code></pre>
+                    </li>
+                    <p>
+                        Now if the condition arises that you want to give a border only at one end, then what will you
+                        do. Let us understand with an example -
+                    </p>
+                    <li>
+                        <p>
+                            <strong>border-top: ; border-right: ; border-bottom: ; border-left: ;</strong>
+                        </p>
+                        <pre><code class="language-css">border-top: 2px solid rgb(231, 22, 231);</code></pre>
+                        <pre><code class="language-css">border-right: 2px solid rgb(18, 10, 133);</code></pre>
+                        <pre><code class="language-css">border-bottom: 2px solid rgba(9, 144, 27, 0.774);</code></pre>
+                        <pre><code class="language-css">border-left: 2px solid rgb(156, 42, 13);</code></pre>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>border-top-left-radius: ; border-top-right-radius: ; border-bottom-left-radius: ;
+                                border-bottom-right-radius: ;</strong>
+                        </p>
+                        <pre><code class="language-css">border-top-left-radius: 4px;</code></pre>
+                        <pre><code class="language-css">border-top-right-radius: 14px;</code></pre>
+                        <pre><code class="language-css">border-bottom-left-radius: 8px;</code></pre>
+                        <pre><code class="language-css">border-bottom-right-radius: 24px;</code></pre>
+                    </li>
+                </ol>
+                <div class="subheading">Background Properties</div>
+                <ol>
+                    <li>
+                        <p>
+                            <strong>background-image: url();</strong> adds an image in background of text or any other
+                            object. It can be from web or from local computer.
+                        </p>
+                        <pre><code class="language-css">background-image: url('images/html5.svg');</code></pre>
+                        <pre><code class="language-css">background-image: url('https://source.unsplash.com/1600x900/?nature,water');</code></pre>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>background-repeat: ; </strong>specfies weather repeat the background or not.
+                        </p>
+                        <pre><code class="language-css">background-repeat: no-repeat; /* repeat-x and repeat-y will make it repeat on x and y axis */</code></pre>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>background-position: ;</strong> specifies the position of background image.
+                        </p>
+                        <pre><code class="language-css">background-position: 192px 34px;</code></pre>
+                        <pre><code class="language-css">background-position: center center;</code></pre>
+                        <pre><code class="language-css">background-position: bottom right;</code></pre>
+                        <pre><code class="language-css">background-position: top center;   /* Explore More */</code></pre>
+                    </li>
+
+                </ol>
+            </div>
+        </li>
+
+
+        <!-- Box Model, Margin and Padding -->
+        <hr>
+        <li>
+            <div class="heading" id="box-model-mp">CSS Box Model, Margin and Padding</div>
+            <div class="discription">
+                <p>
+                    The box model is a very important topic of CSS and if not understood properly, it can create a lot
+                    of confusion in the future. It is the basic framework of web development whether you are making a
+                    website using any other language such as Angular or React. The box model helps us to define the
+                    <em>padding,</em><em>border,</em> and <em>margin</em> around an element. So from the above diagram
+                    we can see where all these things lie around the element. The element is in the center surrounded by
+                    padding, border and margin.
+                </p>
+                <p>
+                    These parts can be explained as-
+                </p>
+                <ul>
+                    <li><strong>Content-</strong>content of the box, where text and images appear.</li>
+                    <li><strong>Padding-</strong>It clears an area around the content. The padding is transparent.</li>
+                    <li><strong>Border-</strong>A border is one that covers the padding and content.</li>
+                    <li><strong>Margin-</strong>It clears an area outside the border. The margin is also transparent.
+                    </li>
+                </ul>
+                <p>
+
+
+                    <!-- Button trigger modal -->
+                    <img src="{{ url_for('static', filename='images/box-model.png') }}" class="center-el img border border-dark rounded" data-bs-toggle="modal" data-bs-target="#exampleModal"></img>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Image Preview</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="{{ url_for('static', filename='images/box-model.png') }}" class="img-fluid border border-dark rounded"></img>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </p>
+
+                <ul>
+                    <li>
+                        <p>
+                            There is padding or margin shorthand for all directions. The first value is for top, 2nd value is for the bottom, 3rd value is for left and 4th value is for right.
+                        </p>
+                        <pre><code class="language-css">padding: 23px 56px 6px 78px;
+/* padding: top right bottom left; */
+margin: 23px 56px 6px 78px;
+/* margin: top right bottom left; */</code></pre>
+                    </li>
+                    <li>
+                        <p>
+                            There is another technique for using the shorthand technique if you want to give the same values for left/right and top/bottom. The first value is the same for both the top and bottom and the second value is the same for both left and right. The two values can be represented as x and y values.
+                        </p>
+                        <pre><code class="language-css">padding: 23px 56px;
+/* padding: y(top/bottom) x(left/right); */
+margin: 23px 56px;
+/* margin: y(top/bottom) x(left/right); */</code></pre>
+                        <p>
+                            Border radius is used to apply an arc type shape in each corner of the border.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If we want to set all the values of padding and margin differently, we can write code like this.
+                        </p>
+                        <pre><code class="language-css">padding-top: 79px;</code></pre>
+                        <pre><code class="language-css">padding-bottom: 79px;</code></pre>
+                        <pre><code class="language-css">padding-left: 34px;</code></pre>
+                        <pre><code class="language-css">padding-right: 79px;</code></pre>
+                        <p> </p><p> </p>
+                        <pre><code class="language-css">margin-top: 3px;</code></pre>
+                        <pre><code class="language-css">margin-bottom: 5px;</code></pre>
+                        <pre><code class="language-css">margin-left: 34px;</code></pre>
+                        <pre><code class="language-css">margin-right: 5px;</code></pre>
+                    </li>
+                    <li>
+                        <p>
+                            On giving width to the element and after that applying padding in the container, the width also changes. It is because in the actual width of an element, margin is already been added into it. If you want this not to happen then you can use the property of ‘box-sizing’.
+                        </p>
+                        <pre><code class="language-css">box-sizing: border-box;</code></pre>
+                        <p>
+                            Now if you change the padding then it will not adjust the width according to the padding.
+                        </p>
+                        <p>
+                            We can take the help of universal selector in the CSS to apply the property of box-sizing in all the elements available. It is denoted with a ‘*’.
+                        </p>
+                        <pre><code class="language-css">*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}</code></pre>
+                    </li>
+                </ul>
+
+            </div>
+        </li>
+
+
+        <!-- Float and clear  -->
+        <hr>
+        <li>
+            <div class="heading" id="float-clear">Float and Clear</div>
+            <div class="discription">
+                <p>
+                    The CSS float property specifies how an element should float. The CSS clear property specifies what elements can float beside the cleared element and on which side. The <em>float</em> property is used for positioning and formatting content, for example, let an image float left to the text in a container. The float property can have one of one of the following values-
+                </p>
+                <ul>
+                    <li><strong>Left-</strong> The elements floats to the left of its container.</li>
+                    <li><strong>Right-</strong> The elements floats to the right of its container.</li>
+                    <li><strong>None-</strong> The element does not float (it will be displayed just where it occurs in the text). This is default.</li>
+                    <li><strong>Inherit-</strong> The element inherits the float value of its parent.</li>
+                </ul>
+                <pre><code class="language-css">float: left;</code></pre>
+                <p>
+                    To make object float in left we will add this property as shown above.
+                </p>
+                <pre><code class="language-css">float: right;</code></pre>
+                <p>
+                    To make object float in right we will add this property as shown above.
+                </p>
+                <p> </p>
+                <p>
+                    <em>
+                        But now the condition arises that the <em>float</em> object overlaps the other lying below it. To overcome this situation we use <strong><em>clear</em></strong> property and it will solve our problem.
+                    </em>
+                </p>
+                <p>To make that the left floating object doesn't overlap its underlying object we will use-</p>
+                <pre><code class="language-css">clear: left;</code></pre>
+                <p>To make that the right floating object doesn't overlap its underlying object we will use-</p>
+                <pre><code class="language-css">clear: right;</code></pre>
+                <p>To make that the both the right and left floating object doesn't overlap its underlying object we will use-</p>
+                <pre><code class="language-css">clear: both;</code></pre>
+
+
+                <div class="subheading">For Text Alignment we have-</div>
+                <pre><code class="language-css">text-align: right;</code></pre>
+                <pre><code class="language-css">text-align: left;</code></pre>
+                <pre><code class="language-css">text-align: center;</code></pre>
+                <pre><code class="language-css">text-align: justify;</code></pre>
+            </div>
+        </li>
+
+
+        <!-- Styling Links and Buttons -->
+        <hr>
+        <li>
+            <div class="heading" id="sty-link-btn">Styling Links and Buttons</div>
+            <div class="discription">
+                <strong><em>What's the need to style links and buttons?</em></strong>
+                <p>
+                    As the HTML gives us very ugly links and buttons we style it using CSS by making some utility classes for further use and it is also recommended if we are going to make production level website.
+                </p>
+                <p>For instance our link and buptton will be like-</p>
+                <pre><code class="language-html">&lt;a href="https://yahoo.com" class="btn"&gt;Read more&lt;/a&gt;
+&lt;button class="btn"&gt;Contact us&lt;/button&gt;</code></pre>
+                <p>
+                    Till here the buttons will look very ugly to make them attractive we will add styling to it like-
+                </p>
+                <pre><code class="language-css">.refer-btn{
+    color: white;
+    background-color: black;
+    border-radius: 26px;
+    margin: 4px auto;
+    padding: 6px 10px;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    display: block;
+    width: 12rem;
+    cursor: pointer; /* For Buttons */
+}</code></pre>
+            <p>and if hovered</p>
+            <pre><code class="language-css">.refer-btn:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+}</code></pre>
+
+            <div class="subheading">Let us now see what Pseudo Selectors are. A pseudo class is used to define a special state of an element.</div>
+            <ol>
+                <li>
+                    <p>Hover is used to change the color of text or background of a button as soon as you hover that part. The code for this is as below.</p>
+                    <pre><code class="language-css">.refer-btn:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+}</code></pre>
+                </li>
+                <li>
+                    <p>The next Pseudo selector is Visited. As soon as you visit the anchor tag button and click the link mentioned, it changes its color. To apply this property, write the code as follows-</p>
+                    <pre><code class="language-css">a:visited{
+    background-color: cornsilk;
+    color: rgb(6, 56, 73);
+}</code></pre>
+                </li>
+                <li>
+                    <p>The next selector is Active. If you visit any button, and click it, it becomes active and showcases with different properties. The code for this is-</p>
+                    <pre><code class="language-css">a:active{
+    background-color: rgb(0, 0, 0);
+    color: rgb(193, 239, 255);
+    border-radius: 25px;
+}</code></pre>
+                </li>
+            </ol>
+            <p>Similarly, we can add all these <strong>Pseudo Selectors</strong> to the <em>Button</em></p>
+            </div>
+        </li>
+
+
+        <!-- Display Property -->
+        <hr>
+        <li>
+            <div class="heading">Display Property</div>
+            <div class="discription">
+                <p>By inspecting both the elements in the Chrome browser, we see that the <em>image</em> is an inline element and the <em>h3</em> heading is the block element. Our objective is to bring all the elements to the center of the webpage. We can achieve it by adjusting the width of the block element i.e. the heading. The respective code of the following is-</p>
+                <pre><code class="language-css">header{
+    border: 2px solid red;
+    margin: auto;
+    width: 1200px;
+}</code></pre>
+                <p>The display of “img” is inline and therefore, to make it come to center, we have to set the property display as block as follows-</p>
+                <pre><code class="language-css">img{
+    margin: auto;
+    display: block;
+    width: 34px;
+}</code></pre>
+                <p>
+                    The next problem which arises is that when we stretch the full width of the page, the text in the heading moves towards left. So to move it towards the center, we can set the property of text-alignment as center.
+                </p>
+                <p>
+                    <strong>Display inline</strong> means it will take the space according to the size of the element. <strong>Display block</strong> means we can set its width and by margin manually.
+                </p>
+                <p>
+                    Now suppose we want to make an element inline as well as customize its width too, then in that case we can use <strong>inline-block.</strong>
+                </p>
+                <p>
+                    The inline-block property here allows us to change the width of inline elements also. To ensure that all the three blocks come in a single line, we can use the property <strong>box-sizing.</strong> It ensure that the width we provide is not changed including padding and margin.
+                </p>
+                <pre><code class="language-css">display: block;</code></pre>
+                <pre><code class="language-css">display: inline;</code></pre>
+                <pre><code class="language-css">display: inline-block;</code></pre>
+                <div class="alert alert-danger"><strong>NOTE: </strong><em>margin: auto;</em> will not work without the element having display block.</div>
+            </div>
+        </li>
+
+    </ol>
+
+</div>
+
+
+
+{% endblock body %}

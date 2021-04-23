@@ -1,0 +1,1521 @@
+﻿{% extends 'base.html' %}
+{% block title %}HTML{% endblock title %}
+{% block fav_ico %}
+<link rel="shortcut icon" href="{{ url_for('static', filename='images/html5.svg') }}" type="image/x-icon">{% endblock
+fav_ico %}') }}
+{% block ex_stylesheet %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/all-lang.css') }}">{% endblock ex_stylesheet %}
+{% block body %}
+
+
+<!-- Main Content Starts Here -->
+<div id="main_content">
+
+
+    <!-- INDEX -->
+    <details>
+        <summary class="sum-ind">
+            <h2 id="index">INDEX:</h2><span id="click-here"><img
+                    src="{{ url_for('static', filename='images/mouse_black_24dp.svg') }}" alt="click here"><span
+                    class="ico-des">HERE</span></span>
+        </summary>
+        <hr class="index-ruler">
+        <ul class="index">
+            <li><a href="#boiler">Boiler Plate</a></li>
+            <li><a href="#meta">Meta Tag</a></li>
+            <li><a href="#link">Link Tag</a></li>
+            <li><a href="#title">Title Tag</a></li>
+            <li><a href="#script">Script Tag</a></li>
+            <li><a href="#style">Style Tag</a></li>
+            <li><a href="#body">Body Tag</a></li>
+            <li><a href="#heading">Heading Tags</a></li>
+            <li><a href="#para-txtedt">Paragraph, Break Line (BR), Horizontal Ruler, Strong,
+                    Emphasis (em), Bold (b), Italic (i),
+                    Underline (u) Tags</a></li>
+            <li><a href="#anchor">Anchor Tag (&lt;a&gt;)</a></li>
+            <li><a href="#img">Image Tag (&lt;img&gt;)</a></li>
+            <li><a href="#list">List Tags</a></li>
+            <li><a href="#table">Table Tags</a></li>
+            <li><a href="#form">Form Tags</a></li>
+            <li><a href="#display-ele">Inline and Display Elements</a></li>
+            <li><a href="#id-class">IDs and Classes</a></li>
+            <li><a href="#html-entities">HTML Entities</a></li>
+            <li><a href="#html-semantics">HTML Semantics</a></li>
+            <li><a href="#iframe-tag">iFrame Tag</a></li>
+            <li><a href="#embed-audio">Audio Tag</a></li>
+            <li><a href="#embed-video">Video Tag</a></li>
+        </ul>
+    </details>
+
+
+    <ol class="main_content">
+
+        <a name="boiler"></a>
+        <!-- Basic Boiler Tag Starts Here -->
+        <hr>
+        <li>
+            <span class="heading">
+                HTML Boiler Plate:-
+            </span>
+            <span class="discription">
+                This is a basic HTML Boiler Plate.
+            </span>
+            <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </li>
+
+        <a name="meta"></a>
+        <!-- Meta Tag Starts Here -->
+        <hr>
+        <li>
+            <span class="heading">
+                Meta Tags:
+            </span>
+            <span class="discription">
+                The Meta Tags are used to define the Meta data in an HTML. They are mainly used in SEO (Search Engine
+                Optimization) techniques which help any particular website to rank better in Google or different search
+                engines. It simply boosts the ranking of a webpage to get more traffic on any website.
+            </span>
+
+            <div class="subheading">Various Meta Tags are:-</div>
+            <ul>
+                <li>
+                    <span class="discription">
+                        It simply means that the characters that are used will be of UTF-8. It declares the page’s
+                        character encoding. It should contain a standard IANA MIME name for character encodings.
+                        Moreover, authors are encouraged to use UTF-8.
+                        <pre><code class="language-html">&lt;meta charset="UTF-8"&gt;</code></pre>
+                    </span>
+                </li>
+
+                <li>
+                    <span class="discription">
+                        This tag is used to make your website responsive and adjust its width in such a way that it
+                        looks good in both PC or mobile. It helps in making the website mobile friendly also.
+                        <pre><code class="language-html">&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;</code></pre>
+                    </span>
+                </li>
+
+                <li>
+                    <span class="discription">
+                        It helps any particular website to open in the highest compatibility mode available. It is
+                        mostly for those who are still using Internet Explorer. Because there are still some people who
+                        have not upgraded their system and are still using the older versions.
+                        <pre><code class="language-html">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+                    </span>
+                </li>
+
+                <li>
+                    <span class="discription">
+                        To add a description, we have to write the above statement and write your own description in the
+                        content part.
+                        <pre><code class="language-html">&lt;meta name="description" content="This is a discription"&gt;</code></pre>
+                    </span>
+                </li>
+
+                <li>
+                    <span class="discription">
+                        Keywords are those special words through which a user reach any website. You can add the
+                        keywords in the content part of the tag.
+                        <pre><code class="language-html">&lt;meta name="keywords" content="keywords1, keywords2, keywords3"&gt;</code></pre>
+                    </span>
+                </li>
+
+                <li>
+                    <span class="discription">
+                        If we want our website to be indexed in Google or other search engines and bots should follow
+                        all the links present on the website, then we have to write like above &uparrow;
+                        <pre><code class="language-html">&lt;meta name= “robots” content= “INDEX, FOLLOW”&gt;</code></pre>
+                    </span>
+                </li>
+            </ul>
+
+        </li>
+
+        <a name="link"></a>
+        <!-- Link Tag Starts Here -->
+        <hr>
+        <li>
+            <span class="heading">
+                Link Tags:
+            </span>
+            <span class="discription">
+                This Tag is used to link any external <strong>CSS</strong>, <strong>JavaScript</strong> or any other file for <strong>RSS</strong>, <strong>Atom</strong>, <strong>Favicon</strong>, etc.
+                <div class="subheading">Various Link Attributes are:-</div>
+            </span>
+            <ul>
+                <li>
+                    <span class="discription">
+                        <pre><code class="language-html">&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+                        It is used to link an external <strong>CSS</strong> stylesheet.
+                    </span>
+                </li>
+
+                <li>
+                    <span class="discription">
+                        <pre><code class="language-html">&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&gt;</code></pre>
+                        It is used to add a Favicon on the website.
+                    </span>
+                </li>
+
+                <li>
+                    <span class="discription">
+                        <pre><code class="language-html">&lt;link rel="alternate" href="atom.xml" type="application/atom+xml" title="Atom"&gt;</code></pre>
+                        It is used to add a <strong>XML</strong> markup design on the website.
+                    </span>
+                </li>
+
+                <li>
+                    <span class="discription">
+                        <pre><code class="language-html">&lt;link rel="import" href="component.html"&gt;</code></pre>
+                        It is used to import from a HTML webpage on the website.
+                    </span>
+                </li>
+
+                <li>
+                    <span class="discription">
+                        <pre><code class="language-html">&lt;link rel="manifest" href="manifest.json"&gt;</code></pre>
+                        It is used to link a JSON (Node JS File) to the
+                        website.
+                    </span>
+                </li>
+
+                <li>
+                    <span class="discription">
+                        <pre><code class="language-html">&lt;link rel="alternate" href="rss.xml" type="application/rss+xml" title="RSS"&gt;</code></pre>
+                        It is also used to add a <strong>XML</strong> markup
+                        design on the
+                        website.
+                    </span>
+                </li>
+
+                <li>
+                    <span class="discription">
+                        <pre><code class="language-html">&lt;link rel="apple-touch-icon" href="favicon.png"&gt;</code></pre>
+                        It is used to add a <strong>Mac Supported Icon</strong> on the
+                        website.
+                    </span>
+                </li>
+            </ul>
+
+        </li>
+
+        <a name="title"></a>
+        <!-- Title Tag Starts Here -->
+        <hr>
+        <li>
+            <span class="heading">
+                Title Tag:-
+            </span>
+            <span class="discription">
+                <p>This tag is used to give heading to the webpage. This is used as follow-</p>
+                <pre><code class="language-html">&lt;title&gt;Document&lt;/title&gt;</code></pre>
+            </span>
+        </li>
+
+        <a name="script"></a>
+        <!-- Script Tag Starts Here -->
+        <hr>
+        <li>
+            <span class="heading">
+                Script Tag:-
+            </span>
+            <span class="discription">
+                <p>
+                    Script Tag is Used to Write on page JavaScript or link external JavaScript File (.js)
+                </p>
+                
+            
+                <div class="subheading">Various Script Attributes.</div>
+                <ul>
+                    <li>
+                        <span class="discription">
+                            <pre><code class="language-html">&lt;script&gt;
+var i = 11
+&lt;/script&gt;</code></pre>
+                            This is used to write internal
+                            JavaScript
+                        </span>
+                    </li>
+
+                    <li>
+                        <span class="discription">
+                            <pre><code class="language-html">&lt;script src="exemple.js"&gt;&lt;/script&gt;</code></pre>
+                                This is used to link an external JavaScript
+                        </span>
+                    </li>
+                </ul>
+            </span>
+        </li>
+
+        <a name="style"></a>
+        <!-- Style Tag Starts Here -->
+        <hr>
+        <li>
+            <span class="heading">
+                Style Tag:-
+            </span>
+            <span class="discription">
+                <p>Style tag is used to write internal CSS on website. It is useful for
+                short projects.</p>
+                <pre><code class="language-html">&lt;style&gt;
+*{
+margin: 0px;
+padding: 0px;
+font-family: 'Courier New', Courier, monospace;
+box-sizing: border-box;
+}
+&lt;/style&gt;</code></pre>
+            </span>
+        </li>
+
+        <a name="body"></a>
+        <!-- Body Tag Starts Here -->
+        <hr>
+        <li>
+            <span class="heading">
+                Body Tag:
+            </span>
+            <span class="discription">
+                Body Tag contains the entire content of a wabpage. All we see on the
+                website is in the body tag.
+            
+            <pre><code class="language-html">&lt;body&gt;
+    &lt;h1&gt;Hi! I am in Body Tag.&lt;/h1&gt;
+
+&lt;/body&gt;</code></pre>
+            </span>
+        </li>
+
+        <a name="heading"></a>
+        <!-- Heading Tag Starts Here -->
+        <hr>
+        <li>
+            <span class="heading">
+                Heading Tag:
+            </span>
+            <span class="discription">
+                Let us begin with the simple heading tags. There are basically
+                six types of heading tags ranging
+                from &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;,
+                and &lt;h6&gt;. These are the
+                six heading tags from h1 being the largest font size and h6
+                being the smallest font size. There
+                is an important you should know about H1 tags. In every website
+                there is only one &lt;h1&gt;
+                tag, which is the main heading of the website. You should never
+                write the normal paragraph text
+                as headings just to make it bold. It is advised that using
+                &lt;h1&gt; tag only once will help in
+                SEO (Search Engine Optimization) of a website and even ranking
+                it higher in different search
+                engines.
+            
+            <div class="subheading">Its basic syntax is as follow-</div>
+            <pre><code class="language-html">&lt;h1&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/h1&gt;
+                &lt;h2&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, quibusdam eligendi.&lt;/h2&gt;
+                &lt;h3&gt;Lorem ipsum dolor sit amet consectetur adipisicing.&lt;/h3&gt;
+                &lt;h4&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/h4&gt;
+                &lt;h5&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, cupiditate!&lt;/h5&gt;
+                &lt;h6&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio est expedita qui quisquam.&lt;/h6&gt;</code></pre>
+            </span>
+        </li>
+
+        <a name="para-txtedt"></a>
+        <!-- Paragraph, BR, HR, strong, em, b, i, u Tags -->
+        <hr>
+        <li>
+            <span class="heading">
+                Paragraph, Break Line (BR), Horizontal Ruler, Strong,
+                Emphasis (em), Bold (b), Italic (i),
+                Underline (u) Tags-
+            </span>
+            <ul>
+                <!-- paragraph tag -->
+                <li>
+                    <div class="subheading">
+                        Paragraph Tag:
+                    </div>
+                    <span class="discription">
+                        <p>Then comes the paragraph tag which is denoted by
+                            &lt;p&gt;. Whenever we want to add a
+                            paragraph on our website then we can simply use
+                            paragraph tag in the format-</p>
+                        <pre><code class="language-html">&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, eius?&lt;/p&gt;</code></pre>
+                        <p>If we want some random texts up to any number of
+                            words then we can either copy from
+                            any article from the Internet or just write
+                            random words, which of course will not
+                            look good. To avoid this, we can write lorem and
+                            the number of words we want in a
+                            paragraph. Let us understand with an example-
+                        </p>
+                        <pre><code class="language-html">&lt;p&gt;lorem45&lt;/p&gt;</code></pre>
+                        <p>This code will give us a paragraph of 40 words.</p>
+                    </span>
+                </li>
+
+                <!-- Strong/Bold (b) , Emphasis (em)/Italic (i) & Underline (u) Tag -->
+                <li>
+                    <div class="subheading">
+                        Strong/Bold (b) , Emphasis (em)/Italic (i) &amp;
+                        Underline (u) Tag:
+                    </div>
+                    <span class="discription">
+                        <p>The next tags that we are going to see are
+                            &lt;strong&gt; and &lt;em&gt; (emphasized)
+                            tags. Writing some texts between strong tags
+                            will make that portion of the text as
+                            bold. And writing any text between em tags, will
+                            convert that part as Italic.
+                            However, these texts can later be changed with
+                            the help of CSS.
+                        </p>
+                        <pre><code class="language-html">&lt;p&gt;&lt;em&gt;&lt;strong&gt;Heading&lt;/strong&gt;&lt;/em&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse eaque sequi doloribus placeat fugiat dolorum dolor libero, dignissimos eius maiores sapiente quo quibusdam natus dolorem, distinctio ullam atque consequuntur? Aut a tempora officia accusamus! Dolore dolor mollitia inventore saepe repellendus.&lt;/p&gt;</code></pre>
+                        <p>
+                            Apart from these there are also Bold and Italic tags
+                            also but it is is recommened to use
+                            them in HTML 5. It is recommended to use strong and
+                            em tags instead.
+                        </p>
+                        <pre><code class="language-html">&lt;p&gt; &lt;b&gt;&lt;i&gt;Heading&lt;/i&gt;&lt;/b&gt; &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;This is in other line. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse eaque sequi doloribus placeat fugiat dolorum dolor libero, dignissimos eius maiores sapiente quo quibusdam natus dolorem, distinctio ullam atque consequuntur? Aut a tempora officia accusamus! Dolore dolor mollitia inventore saepe repellendus.&lt;/p&gt;</code></pre>
+                    </span>
+                </li>
+
+                <!-- Break Line (BR) and Horizontal Ruler (HR) Tags: -->
+                <li>
+                    <span class="heading">
+                        Break Line (BR) and Horizontal Ruler (HR) Tags:
+                    </span>
+                    <span class="discription">
+                        Now to change a line in a paragraph we can easily
+                        use the &lt;br&gt; tag. It is a
+                        self-closing tag which helps to break a line.
+                        However, using too many &lt;br&gt; tags is
+                        not good for practice. We will discuss this more
+                        when we are going to learn CSS.
+                    
+                        <pre><code class="language-html">&lt;p&gt; &lt;em&gt;&lt;strong&gt;Heading&lt;/strong&gt;&lt;/em&gt; &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;This is in other line. &lt;/p&gt;</code></pre>
+                    
+                        Then the next tag is the &lt;hr&gt; tag which is
+                        also a self-closing tag. It helps to
+                        add a horizontal ruler like a line on the webpage.
+                        <pre><code class="language-html">&lt;hr&gt;</code></pre>
+                    </span>
+
+                </li>
+            </ul>
+        </li>
+
+        <a name="anchor"></a>
+        <!-- Anchor (a) Tags: -->
+        <hr>
+        <li>
+            <span class="heading">
+                Anchor Tag:
+            </span>
+            <span class="discription">
+                <p>
+                    In the body tag, if you type “a", anchor tag will
+                appear. Just hit the enter key or if you want
+                you can manually write the whole tag. Refer to the
+                declaration below:
+                </p>
+                
+                <pre><code class="language-html">&lt;a href=""&gt;&lt;/a&gt;</code></pre>
+                <p>
+                    Here href is the attribute of anchor tag where you have
+                to write the URL of the website or Link
+                that you want to open. Next, you have to write the
+                Keyword on which you want the user to click
+                so that he will be redirected to the linked website.
+                Refer to the example below:
+                </p>
+                
+                <pre><code class="language-html">&lt;a href="https://google.com"&gt;Go to Google&lt;/a&gt;</code></pre>
+                <p>
+                    Now, the problem arises here is that as soon as we
+                    click on the keyword, the website will
+                    open on the same webpage but if in case you want to
+                    open the website in a new tab then you
+                    have to add a new attribute in the anchor tag I.e.
+                    “target".
+                </p>
+                <p>
+                    You might be confused between tag and attribute,
+                    then let me quickly tell you the difference
+                    between both. <em>Tag is like a container that
+                        allows you to handle an element whereas
+                        attribute is the property that enhances that
+                        container makes it more convenient to
+                        use.</em>
+                </p>
+                <p>
+                    To open a website in a new tab, you have to write
+                    something like this:
+                </p>
+                <pre><code class="language-html">&lt;a href="https://google.com" target="_blank"&gt;Go to Google&lt;/a&gt;</code></pre>
+                <p>
+                    Through this anchor tag, you can also link internal
+                    webpages that are locally available in
+                    your directory. You just have to use the address of
+                    the internal webpages including the file
+                    name with its extension.
+                </p>
+                <pre><code class="language-html">&lt;a href="index.html" target="_blank"&gt;Go to HomePage&lt;/a&gt;</code></pre>
+                <p>
+                    If we Want to link in between our webpage we have to
+                    use <em>name</em> attribute to the
+                    anchor tag to the position where we want the user to
+                    go after clicking on the hyperlink.
+                    Also we have to put # before the value given to
+                    <em>name</em> in <em>href</em> attribute of
+                    ancor tag. Refer the exemple to clear it.
+                </p>
+                <pre><code class="language-html">&lt;a href="#value"&gt;Go To Bottom&lt;/a&gt;
+        &lt;p&gt;
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, fugit quaerat aperiam natus doloremque dolor eaque architecto nihil quisquam accusamus vero quidem quia repudiandae.
+        &lt;/p&gt;
+
+        &lt;p&gt;
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nemo autem, nihil perspiciatis commodi dolores, distinctio esse consequuntur iusto accusantium adipisci dignissimos! Voluptates mollitia dolorum sint quia eveniet. Praesentium, debitis non?
+        &lt;/p&gt;
+        &lt;a name="value"&gt;&lt;/a&gt;</code></pre>
+
+            </span>
+        </li>
+
+        <a name="img"></a>
+        <!-- Image (img) Tags: -->
+        <hr>
+        <li>
+            <span class="heading">
+                Image (img) Tag:
+            </span>
+            <span class="discription">
+                <p>
+                    img tag is used to display Image on webpage. It
+                    generally contains src and alt attributes.
+                    For instance-
+                </p>
+                <pre><code class="language-html">&lt;img src="" alt=""&gt;</code></pre>
+                <p>
+                    Here “src" is the field where you have to insert
+                    the URL or address of the image and the
+                    “alt" attribute is a field that will display to
+                    users if their browser fails to load the
+                    image.
+                </p>
+                <p>
+                    In the “alt" tag, we generally input a keyword
+                    of the image that can define the image in
+                    case the user can’t see the image.
+                </p>
+                <div class="subheading">For Instance-</div>
+                <pre><code class="language-html">&lt;img src="https://source.unsplash.com/random" alt= "Error loading image"&gt;</code></pre>
+                <p>
+                    Here a random image will be loaded because this
+                    URL stores multiple images and any one of
+                    them gets reloaded every time we refresh the
+                    webpage.
+                </p>
+                <p>
+                    Apart from this, let's see another example where
+                    we can adjust the height and width of the
+                    image using the URL only. Well, this is not
+                    something that we can do in every URL. Here we
+                    can do it because the developers of the website
+                    have created this URL accordingly.
+                </p>
+                <div class="subheading">For Instance-</div>
+                <pre><code class="language-html">&lt;img src="https://source.unsplash.com/1600x900/?nature,water" alt= "Error loading image"&gt;</code></pre>
+                <p>
+                    If you want to manipulate the dimensions of the
+                    images, you can use the “height" and “width"
+                    attribute of img tag. Though it is not
+                    recommended to manipulate the dimension using
+                    these
+                    attributes, we will use CSS to alter the design
+                    accordingly. Refer to the illustration
+                    below:
+                </p>
+                <pre><code class="language-html">&lt;img src="https://source.unsplash.com/1600x900/?nature,water" alt= "Error loading image" width = "233" height="34"&gt;</code></pre>
+                <p>
+                    Here the image will be loaded as per the new
+                    dimensions.
+                </p>
+            </span>
+        </li>
+
+        <a name="list"></a>
+        <!-- List Tag (ol, ul, dl) Goes Here -->
+        <hr>
+        <li>
+
+            <span class="heading">
+                Lists :-
+            </span>
+            <div class="subheading">
+                The lists are basically of Three types-
+            </div>
+            <ul>
+                <li>
+                    <span class="discription">
+                        Ordered lists (ol):- The Basic types are
+                        A, a, 1, I, i, etc. These can be
+                        determined by
+                        CSS <em>"list-style"</em> property.
+                    </span>
+                    <pre><code class="language-html">&lt;ol&gt;
+    &lt;li&gt;RAM&lt;/li&gt;
+    &lt;li&gt;CPU&lt;/li&gt;
+    &lt;li&gt;MotherBoard&lt;/li&gt;
+    &lt;li&gt;SMPS&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                </li>
+
+                <li>
+                    <span class="discription">
+                        Unordered List (ul):- The Basic types
+                        are Disc, Circle, Square, etc. These can
+                        be
+                        determined by CSS <em>"list-style"</em>
+                        property.
+                    </span>
+                    <pre><code class="language-html">&lt;ul&gt;
+    &lt;li&gt;RAM&lt;/li&gt;
+    &lt;li&gt;CPU&lt;/li&gt;
+    &lt;li&gt;MotherBoard&lt;/li&gt;
+    &lt;li&gt;SMPS&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                </li>
+
+                <li>
+                    <span class="discription">
+                        Dictionary List (dl) - are indented
+                        lists without any bullet sumbol or any
+                        umber in
+                        front of each item.
+                    </span>
+                    <pre><code class="language-html">&lt;dl&gt;
+    &lt;dt&gt;RAM&lt;/dt&gt;
+    &lt;dd&gt;Random Access Memory&lt;/dd&gt;
+    &lt;dt&gt;CPU&lt;/dt&gt;
+    &lt;dd&gt;Central Processing Unit&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                </li>
+
+                <li>
+                    <span class="discription">
+                        Raw Code-
+                    </span>
+                    <pre><code class="language-html">&lt;!-- Ordered List --&gt;
+&lt;ol&gt;
+    &lt;li&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                    <pre><code class="language-html">&lt; -- Unordered List --&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                    <pre><code class="language-html">&lt;!-- Dictionary List --&gt;
+&lt;dl&gt;
+    &lt;dt&gt;&lt;/dt&gt;
+    &lt;dd&gt;&lt;/dd&gt;
+    &lt;dt&gt;&lt;/dt&gt;
+    &lt;dd&gt;&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+
+                    <pre><code class="language-html">&lt;!-- Nested List --&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;/li&gt;
+    &lt;li&gt;
+        &lt;ol&gt;
+            &lt;li&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                </li>
+            </ul>
+        </li>
+
+        <a name="table"></a>
+        <!-- Table Tag Goes Here -->
+        <hr>
+        <li>
+            <span class="heading">
+                Table Tag:-
+            </span>
+            <span class="discription">
+                Table tag is used to make tables on webpage. The
+                main part is the table tag, and it consists of
+                two parts: the table head and table body. The
+                &lt;thead&gt; consists of the main head of the
+                table and &lt;tbody&gt; consists of the body of
+                the table.
+                <p>
+                    &lt;tr&gt; is used to justify that it is the
+                    part of a row. Inside the &lt;tr&gt; tag, we
+                    give the headings of a row under the
+                    &lt;th&gt; tag. The final structure of a
+                    table looks
+                    like-
+                </p>
+                <table class="Example-table">
+                    <caption>Example Table</caption>
+                    <thead>
+                        <tr>
+                            <th>Sr. No.</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Abhishek Kapoor</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Purvi Kapoor</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Palak</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Yana</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Rhythm</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Parth</td>
+                            <td>2</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <p>Raw HTML Of table shown above</p>
+                <pre><code class="language-html">&lt;table id="Example-table"&gt;
+&lt;caption&gt;Example Table&lt;/caption&gt;
+&lt;thead&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Sr. No.&lt;/th&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Age&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+    &lt;tr&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;Abhishek Kapoor&lt;/td&gt;
+        &lt;td&gt;15&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;Purvi Kapoor&lt;/td&gt;
+        &lt;td&gt;14&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td&gt;Palak&lt;/td&gt;
+        &lt;td&gt;11&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;4&lt;/td&gt;
+        &lt;td&gt;Yana&lt;/td&gt;
+        &lt;td&gt;10&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;5&lt;/td&gt;
+        &lt;td&gt;Rhythm&lt;/td&gt;
+        &lt;td&gt;7&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;6&lt;/td&gt;
+        &lt;td&gt;Parth&lt;/td&gt;
+        &lt;td&gt;2&lt;/td&gt;
+    &lt;/tr&gt;
+
+&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+                <p>Raw CSS Of table shown above</p>
+                <pre><code class="language-css">/* Ubuntu */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+    --Ubuntu: 'Ubuntu', sans-serif;
+    --Roboto: 'Roboto', sans-serif;
+    --Raleway: 'Raleway', sans-serif;
+
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* font-family: var(--Roboto); */
+
+}
+
+#Example-table{
+    margin: 5px auto;
+    padding: 4px;
+    border: 2px solid black;
+    border-radius: 6px;
+
+}
+
+#Example-table caption, #Example-table th{
+    font-family: var(--Ubuntu);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+#Example-table th, #Example-table td{
+    border: 1px solid black;
+    padding: 7px 10px;
+    border-radius: 3px;
+
+}
+                        </code></pre>
+
+                <p>
+                    In a table, there are mostly two things to
+                    remember, the head and the body of a table.
+                    To
+                    add more rows to the table, we can simply
+                    add a <tr> tag and add any number of rows in
+                        a
+                        table.
+                </p>
+
+            </span>
+        </li>
+
+        <a name="form"></a>
+        <!-- Forms In HTML -->
+        <hr>
+        <li>
+            <span class="heading">
+                Forms In HTML:-
+            </span>
+            <span class="discription">
+                <p>
+                    Forms are a very important part of HTML. It
+                    represents the document section containing
+                    interactive controls for submitting
+                    information.
+                </p>
+                <p>
+                    Whenever we add a &lt;form&gt; tag in the
+                    HTML, it is going to ask for some action for
+                    submitting that particular form in the
+                    backend for future reference. So, for now,
+                    we will
+                    write it as backend.php. All the data
+                    submitted in a form will be stored
+                    automatically in
+                    the backend “backend.php” after submitting
+                    it.
+                </p>
+                <p class="subheading">
+                    The template will look like-
+                </p>
+                <pre><code class="language-html">&lt;form action="backend.php"&gt;&lt;/form&gt;</code></pre>
+                <p>
+                    Then comes the &lt;input&gt;tags which are
+                    present inside the form, where the user
+                    provides
+                    the input. These inputs can be of any type
+                    whether text, button, checkbox, date, time,
+                    etc.
+                    Input Tags are used to create interactive
+                    controls for web-based forms in order to
+                    accept
+                    data from the user.
+                </p>
+                <p>
+                    The &lt;span&gt; is an in-line element and
+                    &lt;div&gt; is a block element. Which means,
+                    if
+                    we use two separate div tags for different
+                    inputs, then all the inputs will come on
+                    different lines.
+                </p>
+                <ul>
+                    <li>
+                        <span class="subheading">To get the
+                            input as text, the syntax is-</span>
+                        <pre><code class="language-html">&lt;div&gt;
+    Your Name: &lt;input type="text" name="mytext" id="none"&gt;
+&lt;/div&gt;</code></pre>
+                    </li>
+                    <li>
+                        <span class="subheading">To get the
+                            input type as an email in the form
+                            the syntax
+                            is-</span>
+                        <pre><code class="language-html">&lt;div&gt;
+    Email: &lt;input type="email" name="myEmail"&gt;
+&lt;/div&gt;</code></pre>
+                        <p>The name here is used so that the
+                            backend can recognize the tag that
+                            we are using.
+                        </p>
+                    </li>
+                    <li>
+                        <span class="subheading">To get the
+                            submit button in the form, the
+                            syntax is-</span>
+                        <pre><code class="language-html">&lt;div&gt;
+    &lt;input type="submit" value="submit now"&gt;
+&lt;/div&gt;</code></pre>
+                    </li>
+                    <li>
+                        <span class="subheading">We can also add
+                            date and time in the form. To add
+                            these, the
+                            general syntax is</span>
+                        <pre><code class="language-html">&lt;div&gt;
+    &lt;input type="date" name="myDate" id="none"&gt;
+&lt;/div&gt;</code></pre>
+                        <p>It will give the complete date form
+                            in the format of “dd/mm/yyyy”.</p>
+                    </li>
+                    <li>
+                        <span class="subheading">To add any
+                            numeric text in the HTML form, the
+                            syntax is-</span>
+                        <pre><code class="language-html">&lt;div&gt;
+    Number: &lt;input type="number" name="myNumber"&gt;
+&lt;/div&gt;</code></pre>
+                    </li>
+                    <p>
+                        While filling several online forms, you
+                        must have seen the radio buttons and
+                        checkboxes
+                        in the form. Radio buttons are such
+                        buttons that allows to select any one of
+                        the
+                        following options amongst all. For
+                        example, while selecting the gender, we
+                        can only
+                        select either male or female. Whereas
+                        the checkbox allows selecting the
+                        multiple options
+                        available. The example of both the
+                        formats are as follows-
+                    </p>
+                    <li>
+                        <span class="subheading">For
+                            checkbox-</span>
+                        <pre><code class="language-html">&lt;div&gt;
+    Are you eligible?: &lt;input type="checkbox" name="myEligibility" checked&gt;
+&lt;/div&gt;</code></pre>
+                    </li>
+                    <li>
+                        <span class="subheading">For Radio
+                            buttons-</span>
+                        <pre><code class="language-html">&lt;div&gt;
+    Gender: Male &lt;input type="radio" name="myGender"&gt; Female &lt;input type="radio" name="myGender"&gt;
+    Other &lt;input type="radio" name="myGender"&gt;
+&lt;/div&gt;</code></pre>
+                    </li>
+                    <li>
+                        <span class="subheading">To reset all
+                            the information, entered in the
+                            form, we take the
+                            help of a reset button. To get the
+                            reset button, we have to
+                            write-</span>
+                        <pre><code class="language-html">&lt;div&gt;
+    &lt;Input type= "reset" value= "Reset Now"&gt;
+&lt;/div&gt;</code></pre>
+                    </li>
+                </ul>
+                <p>There is also a "Placeholder" attribute to
+                    show text in input box</p>
+                <p>There is also a "Textarea" Tag to take long
+                    paragraph as input.</p>
+                <pre><code class="language-html">&lt;textarea name="" id="" cols="30" rows="10"&gt;&lt;/textarea&gt;</code></pre>
+            </span>
+        </li>
+
+        <a name="display-ele"></a>
+        <!-- Inline and Display Element -->
+        <hr>
+        <li>
+            <span class="heading">
+                Inline and Display Elements:
+            </span>
+            <span class="discription">
+                <p>
+                    Inline elements are those elements which
+                    only occupy the space bounded by the tags
+                    defining the element, instead of breaking
+                    the flow of element. On the other hand,
+                    block-level elements take up the entire
+                    space of its parent element. Let us
+                    understand this with an example-
+                </p>
+                <p>
+                    If we write any text in the paragraph tag
+                    like this-
+                </p>
+                <pre><code class="language-html">&lt;p&gt;This is a paragraph&lt;/p&gt; &lt;p&gt;This is also a paragraph&lt;/p&gt;</code></pre>
+                <p>
+                    In both the above examples, we will see the
+                    output in both different lines, not in the
+                    same line. We want both the texts in the
+                    same line but it is not so. Can you think
+                    why?
+                </p>
+                <p>
+                    It is because the paragraph tag is a block
+                    element. The Block element means that it
+                    will take the full width of a single line
+                    and does not allow any other content to fit
+                    in it. But, if we write both the texts
+                    between the &lt;span&gt; tags like-
+                </p>
+                <pre><code class="language-html">&lt;span&gt;This is a paragraph&lt;/span&gt; &lt;span&gt;This is also a paragraph&lt;/span&gt;</code></pre>
+                <p>
+                    Then we see that both the texts will appear
+                    in the same line. It is because the <span>
+                        tag is an inline element. It allows all
+                        the elements in the same line.
+                </p>
+                <p>
+                    To understand it more, we can take the help
+                    of CSS by applying the border-
+                </p>
+                <pre><code class="language-html">&lt;p style=“border: 2px solid, red;”&gt;
+    This is a paragraph
+&lt;/p&gt;
+&lt;p style=“border: 2px solid blue;”&gt;
+    This is also a paragraph
+&lt;/p&gt;
+
+&lt;span style=“border: 2px solid red;”&gt;
+    This is a span
+&lt;/span&gt;
+
+&lt;span style=“border: 2px solid red;”&gt;
+    This is also a span
+&lt;/span&gt;</code></pre>
+
+                <p>
+                    After testing the above code in the live
+                    server, you will know the main difference
+                    between inline and block elements.
+                </p>
+                <p>
+                    The above example shows how inline elements
+                    will take only its portion of text whereas
+                    the block element will take the whole width
+                    of the line. You will understand it more
+                    with the help of different colours through
+                    CSS. Anchor &lt;a&gt; tags also behaves like
+                    an inline element.
+                </p>
+            </span>
+        </li>
+
+        <a name="id-class"></a>
+        <!-- IDs and Classes -->
+        <hr>
+        <li>
+            <span class="heading">
+                IDs and Classes-
+            </span>
+            <span class="discription">
+                <p>
+                    When a new child is born, we urge to give
+                    him a name or his identity by which he will
+                    be known further. Or if you are having a
+                    pet, you must have given him some name to
+                    call. In the same way, IDs refer to giving a
+                    name to any particular element for its
+                    identity. It simply refers giving an
+                    identity to an element. We know, no two
+                    names can be given to any of the two members
+                    of the family. In the same way, one ID can
+                    be given to only one element on a website.
+                    Therefore, in the below example, the id
+                    mainBox cannot be given to any other
+                    element.
+                </p>
+                <pre><code class="language-html">&lt;div id= "mainBox" class= "redBG"&gt;</code></pre>
+                <p>
+                    Now the question arises what is the need for
+                    an ID in HTML? The answer is, while using
+                    JavaScript or CSS, we can target one full
+                    element and can make the necessary changes
+                    in it. In the same way, we can grab the full
+                    element and change the border or width or
+                    many more things through CSS.
+                </p>
+                <p>
+                    Assume that I am having 100 elements in my
+                    HTML and I want to give a red background to
+                    all the 100 elements. To do this, we have
+                    two options. Either we have to select each
+                    element and assign a red background to it or
+                    we can create a class redBG and assign a red
+                    background to it. Then we can give this
+                    class to the elements in which we want a red
+                    background color. To avoid confusion, I am
+                    assuming that the class redBG is already
+                    defined.
+                </p>
+                <p>
+                    One point to note here is we can assign only
+                    one ID to a particular element but it is not
+                    so in the case of classes. An element can
+                    have more than one class in itself. The more
+                    classes we add in an element, the more
+                    property will get added to it.
+                </p>
+                <p>
+                    Classes are denoted by a dot ‘.’ and ID is
+                    denoted by hash ‘#’. For example, to get a
+                    redBG class in an element we can simply
+                    write that element name followed by .redBG.
+                </p>
+                <p>
+                    <strong><em>*Imp-</em></strong>
+                    <em>
+                        We can add multiple classes or ids to
+                        the same attribute of element by
+                        <strong>space</strong> ("&nbsp;").
+                    </em>
+                </p>
+            </span>
+        </li>
+
+        <a name="html-entities"></a>
+        <!-- HTML Entities -->
+        <hr>
+        <li>
+            <span class="heading">
+                HTML Entities-
+            </span>
+            <span class="discription">
+                <p>
+                    An entity is a piece of text (“string”) that
+                    begins with an ‘&’ and ends with a ‘;’.
+                    These are frequently used to display
+                    reserved characters, and invisible
+                    characters.
+                </p>
+                <p>
+                    Try to understand with the below example. If we write the code as-
+                </p>
+                <pre><code class="language-html">&lt;div class= “container”&gt;
+    &lt;p&gt;This is a Paragraph&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class= “container”&gt;
+    &lt;p&gt;This is another Paragraph&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+                <p>
+                    You will normally say that all the extra
+                    spaces will reflect back on the webpage. But
+                    it is not so. Because HTML treats all the
+                    extra spaces as a single space only and
+                    automatically removes all of them.
+                    Therefore, if you want to use extra spaces
+                    or any special characters, then you have to
+                    use HTML entities. To get extra space we can
+                    use &nbsp (non-breaking space) after that
+                    particular text. For example-
+                </p>
+                <pre><code class="language-html">&lt;div class= “container”&gt;
+    &lt;p&gt;This is another &amp;nbsp; Paragraph&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+                <p>
+                    By writing this way, we can create 1 extra
+                    space after the word another. By adding five
+                    &nbsp, we can get 5 extra spaces. However, I
+                    do not recommend using this method because
+                    it looks unprofessional. We will learn to
+                    create extra spaces in CSS with the help of
+                    margin, padding, or selectors that looks
+                    more professional.
+                </p>
+                <p>
+                    Entities are also used to write some special
+                    characters that you cannot write from
+                    keyboards and also those words that are
+                    reserved in HTML. For example, if we want
+                <p> to appear in the result, then it is not
+                    possible without the help of entities.
+                </p>
+                <pre><code class="language-html">&lt;div class= “container”&gt;
+    &lt;p&gt;This is another Paragraph &lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                <p>
+                    By writing the above code, we will see that
+                    we cannot obtain the
+                <p> in our result. Therefore, the solution for
+                    this is we can take the help of HTML
+                    entities. We have to write in this format-
+                </p>
+                <pre><code class="language-html">&lt;div class= “container”&gt;
+    &lt;p&gt;This is another Paragraph &amp;lt;p&amp;gt;&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+                <p>
+                    There is a list of different reserved
+                    characters and hundreds of special
+                    characters that you cannot write without
+                    entities. There is no need to learn all
+                    those entities available. You are always
+                    free to take the help of various references
+                    available.
+                </p>
+                <a href="https://dev.w3.org/html5/html-author/charref" class="refer-btn" target="_blank">Refer
+                    Entities</a>
+
+            </span>
+        </li>
+
+        <a name="html-semantics"></a>
+        <!-- HTML Semantic Tags -->
+        <hr>
+        <li>
+            <span class="heading">HTML Semantic Tags-</span>
+            <span class="discription">
+                <p>
+                    Semantic means to provide meaning to any
+                    word. If we talk in about a web page, then
+                    earlier most of the websites are made only
+                    using divs including different classes and
+                    IDs in them. But that was not the correct
+                    way of telling the search engines that if
+                    the elements are header, footer, or any
+                    other body.
+                </p>
+                <p>
+                    There are many examples of Semantics. You
+                    can take the reference of the internet to
+                    view all. Here are some of the important
+                    semantic elements-
+                </p>
+                <ol>
+                    <li>
+                        <pre><code class="language-html">&lt;header&gt;
+
+&lt;/header&gt;</code></pre>
+                    </li>
+                    <li>
+                        <pre><code class="language-html">&lt;nav&gt;
+
+&lt;/nav&gt;</code></pre>
+                    </li>
+                    <li>
+                        <pre><code class="language-html">&lt;section&gt;
+
+&lt;/section&gt;</code></pre>
+                    </li>
+                    <li>
+                        <pre><code class="language-html">&lt;article&gt;
+
+&lt;/article&gt;</code></pre>
+                    </li>
+                    <li>
+                        <pre><code class="language-html">&lt;footer&gt;
+
+&lt;/footer&gt;</code></pre>
+                    </li>
+                </ol>
+                <p>
+                    With these examples, the search engines can
+                    easily differentiate between headers,
+                    navigation bars, sections, bodies, and
+                    footers. Also, when we share the link of
+                    this website in social media, then the
+                    viewers will easily understand headings,
+                    sections, and body of a website.
+                </p>
+                <a href="https://www.w3schools.com/html/html5_semantic_elements.asp" class="refer-btn"
+                    target="_blank">Refer
+                    Here&RightArrow;</a>
+            </span>
+        </li>
+
+
+        <!-- Embed a audio-video in html  -->
+        <hr>
+        <li>
+            <span class="heading">Audio, Video and iframe Tags:</span>
+
+            <span class="discription">
+                <a name="iframe-tag"></a>
+                <span class="subheading">&lt;iframe&gt;</span>
+                <p>
+                    The <strong><em style="color: #272822;">&lt;iframe&gt;</em></strong> tag specifies an inline frame.
+                </p>
+                <p>
+                    An inline frame is used to embed another document within the current HTML document.
+                </p>
+                <span class="subheading">For Instance-</span>
+                <pre><code class="language-html">&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/93TbZBNFd98" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="discription"&gt;&lt;/iframe&gt;</code></pre>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/93TbZBNFd98"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen class="center-el"></iframe>
+
+
+
+
+                <a name="embed-audio"></a>
+                <span class="subheading">&lt;audio&gt;</span>
+
+                <table class="Example-table">
+                    <caption>Audio Attributes</caption>
+                    <thead>
+                        <tr>
+                            <th>Attributes</th>
+                            <th>Value</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>autoplay</td>
+                            <td>autoplay</td>
+                            <td>Specifies that the audio will start playing as soon as it is ready</td>
+                        </tr>
+                        <tr>
+                            <td>controls</td>
+                            <td>controls</td>
+                            <td>Specifies that audio controls should be displayed (such as a play/pause button etc)</td>
+                        </tr>
+                        <tr>
+                            <td>loop</td>
+                            <td>loop</td>
+                            <td>Specifies that the audio will start over again, every time it is finished</td>
+                        </tr>
+                        <tr>
+                            <td>muted</td>
+                            <td>muted</td>
+                            <td>Specifies that the audio output should be muted</td>
+                        </tr>
+                        <tr>
+                            <td>preload</td>
+                            <td>
+                                <div>auto</div>
+                                <div>metadata</div>
+                                <div>none</div>
+                            </td>
+                            <td>Specifies if and how the author thinks the audio should be loaded when the page loads
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>src</td>
+                            <td><em>URL</em></td>
+                            <td>Specifies the URL of the audio file</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+                <p>
+                    Ways to add Audio are:
+                </p>
+                <ul>
+                    <li>
+                        <em>1<span style="font-size: 0.9em;"> st</span>-way</em>
+                        <pre><code class="language-html">&lt;audio src="images/Demon - JVNA.mp3" class="subheading" controls&gt;&lt;/audio&gt;</code></pre>
+                        <audio src="{{ url_for('static', filename='images/Demon-JVNA.mp3') }}" class="subheading"
+                            controls></audio>
+                    </li>
+                    <li>
+                        <em>2<span style="font-size: 0.9em;"> nd</span>-way</em>
+                        <pre><code class="language-html">&lt;audio controls class="ifr-example"&gt;
+    &lt;source src="images/Demon - JVNA.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;</code></pre>
+                        <audio controls class="ifr-example">
+                            <source src="{{ url_for('static', filename='images/Demon-JVNA.mp3') }}" type="audio/mpeg">
+                        </audio>
+                    </li>
+                </ul>
+
+                <a href="https://www.w3schools.com/tags/tag_audio.asp" class="refer-btn">Refer Here &rightarrow;</a>
+
+
+            </span>
+
+            <a name="embed-video"></a>
+            <div class="subheading">&lt;video&gt;</div>
+            <div class="discription">
+                <p>
+                    The &lt;video&gt; tag is used to embed video content in a document, such as a movie clip or other
+                    video streams.
+                </p>
+                <p>
+                    The &lt;video&gt; tag contains one or more &lt;source&gt; tags with different video sources. The
+                    browser will choose the first source it supports.
+                </p>
+                <p>
+                    The text between the &lt;video&gt; and &lt;/video&gt; tags will only be displayed in browsers that
+                    do not support the &lt;video&gt; element.
+                </p>
+
+                <table class="Example-table">
+                    <caption>
+                        <span class="subheading">
+                            <strong>
+                                <em>
+                                    Optional Attributes
+                                </em>
+                            </strong>
+                        </span>
+                    </caption>
+
+                    <thead>
+                        <tr>
+                            <th>Attribute</th>
+                            <th>Value</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>autoplay</td>
+                            <td>autoplay</td>
+                            <td>Specifies that the video will start playing as soon as it is ready</td>
+                        </tr>
+                        <tr>
+                            <td>controls</td>
+                            <td>controls</td>
+                            <td>Specifies that video controls should be displayed (such as a play/pause button etc).
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>height</td>
+                            <td>pixels</td>
+                            <td>Sets the height of the video player</td>
+                        </tr>
+                        <tr>
+                            <td>loop</td>
+                            <td>loop</td>
+                            <td>Specifies that the video will start over again, every time it is finished</td>
+                        </tr>
+                        <tr>
+                            <td>muted</td>
+                            <td>muted</td>
+                            <td>Specifies that the audio output of the video should be muted</td>
+                        </tr>
+                        <tr>
+                            <td>poster</td>
+                            <td><em>URL</em></td>
+                            <td>Specifies an image to be shown while the video is downloading, or until the user hits
+                                the play button</td>
+                        </tr>
+                        <tr>
+                            <td>preload</td>
+                            <td>
+                                <div>auto</div>
+                                <div>metadata</div>
+                                <div>none</div>
+                            </td>
+                            <td>Specifies if and how the author thinks the video should be loaded when the page loads
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>src</td>
+                            <td><em>URL</em></td>
+                            <td>Specifies the URL of the video file</td>
+                        </tr>
+                        <tr>
+                            <td>width</td>
+                            <td>pixels</td>
+                            <td>Sets the width of the video player</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <span class="subheading">Ways to add <em>&lt;video&gt;</em> tag:</span>
+                <ul>
+                    <li>
+                        <p class="subheading">1<span style="font-size: 0.9em;">st</span> - Way</p>
+
+                        <pre><code class="language-html">&lt;video src="../images/Healthy Programmer.mp4" controls class="ifr-example" poster="../images/Healthy-Programmer.png"&gt;&lt;/video&gt;</code></pre>
+                        <p><em>Recommended Meathod</em></p>
+                    </li>
+                    <li>
+                        <p class="subheading">2<span style="font-size: 0.9em;">nd</span> - Way</p>
+
+                        <pre><code class="language-html">&lt;video width="320" height="240" controls class="ifr-example" poster="../images/Healthy-Programmer.png"&gt;
+    &lt;source src="../images/Healthy Programmer.mp4" type="video/mp4"&gt;
+    &lt;!-- &lt;source src="movie.ogg" type="video/ogg"&gt; --&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;</code></pre>
+
+                    </li>
+
+                    <p class="subheading"><em>Final Output of all above are same.</em></p>
+                    <video src="{{ url_for('static', filename='images/Healthy-Programmer.mp4') }}" controls
+                        class="center-el"
+                        poster="{{ url_for('static', filename='images/Healthy-Programmer.png') }}"></video>
+                </ul>
+
+            </div>
+
+
+        </li>
+
+        <!-- HTML Finished Here -->
+
+    </ol>
+
+
+
+
+</div>
+
+
+
+
+{% endblock body %}

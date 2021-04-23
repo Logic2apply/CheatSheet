@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block title %}Hey! Here is Your Cheatsheet To Help You!!{% endblock title %}
+{% block fav_ico %}<link rel="shortcut icon" href="{{ url_for('static', filename='images/copyblack.svg') }}" type="image/x-icon">{% endblock fav_ico %}') }}
+{% block ex_stylesheet %}{% endblock ex_stylesheet %}
+{% block body %}
+
+        
+        <div id="main">
+            <div class="HTML Language">
+                <div class="lang_title">HTML</div>
+                <div class="lang_img"><img src="{{ url_for('static', filename='images/html5.svg') }}" alt="Error Loading images"></div>
+                <div class="cont_discription">HTML is a markup language which is used to design the structure of a
+                    website. Click on the button below to view the Cheatsheet.</div>
+                <a href="/html" class="CheatBtn">Go To Cheatsheet &rightarrow;</a>
+            </div>
+
+            <div class="CSS Language">
+                <div class="lang_title">CSS</div>
+                <div class="lang_img"><img src="{{ url_for('static', filename='images/css-3.svg') }}" alt="Error Loading images"></div>
+                <div class="cont_discription">CSS is a language used to give awesome designs to the HTML Websites. Click
+                    on the button below to view the Cheatsheet.</div>
+                <a href="/css" class="CheatBtn">Go To Cheatsheet &rightarrow;</a>
+            </div>
+
+            <div class="JavaScript Language">
+                <div class="lang_title">JavaScript</div>
+                <div class="lang_img"><img src="{{ url_for('static', filename='images/javascript.svg') }}" alt="Error Loading images"></div>
+                <div class="cont_discription">Javascript is a programming language to make dynamic Websites. It is also
+                    called the Brain of Website. Click on the button below to view the Cheatsheet.</div>
+                <a href="/javascript" class="CheatBtn">Go To Cheatsheet &rightarrow;</a>
+            </div>
+
+            <div class="Python Language">
+                <div class="lang_title">Python</div>
+                <div class="lang_img"><img src="{{ url_for('static', filename='images/python.svg') }}" alt="Error Loading images"></div>
+                <div class="cont_discription">Python is a programming language to make programms, websites, GUIs, games,
+                    etc. Click on the button below to view the Cheatsheet.</div>
+                <a href="/python" class="CheatBtn">Go To Cheatsheet &rightarrow;</a>
+            </div>
+
+            <div class="Tkinter Language">
+                <div class="lang_title">Tkinter</div>
+                <div class="lang_img"><img src="{{ url_for('static', filename='images/tkinter.svg') }}" alt="Error Loading images"></div>
+                <div class="cont_discription">Tkinter is a python package used to make awesome GUIs very easily. Click on the button below to view the Cheatsheet.</div>
+                <a href="/tkinter" class="CheatBtn">Go To Cheatsheet &rightarrow;</a>
+            </div>
+
+            <div class="Flask Language">
+                <div class="lang_title">Flask</div>
+                <div class="lang_img"><img src="{{ url_for('static', filename='images/flask-logo.svg') }}" alt="Error Loading images"></div>
+                <div class="cont_discription">Flask is a Python Web Framework used to make CRUD apps. Click on the button below to view the Cheatsheet.</div>
+                <a href="/flask" class="CheatBtn">Go To Cheatsheet &rightarrow;</a>
+            </div>
+
+            <div class="Django Language">
+                <div class="lang_title">Django</div>
+                <div class="lang_img"><img src="{{ url_for('static', filename='images/django-logo-negative.svg') }}" alt="Error Loading images"></div>
+                <div class="cont_discription">Django is a python Web Framework used to make complex websites like- e-commerce store, etc. and gives large in built Features. Click on the button below to view the Cheatsheet.</div>
+                <a href="/django" class="CheatBtn">Go To Cheatsheet &rightarrow;</a>
+            </div>
+
+        </div>
+
+
+{% endblock body %}

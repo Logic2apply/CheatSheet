@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}HTML{% endblock title %}
+{% block fav_ico %}<link rel="shortcut icon" href="{{ url_for('static', filename='images/css-3.svg') }}" type="image/x-icon">{% endblock fav_ico %}') }}
+{% block ex_stylesheet %}<link rel="stylesheet" href="{{ url_for('static', filename='css/all-lang.css') }}">{% endblock ex_stylesheet %}
+{% block body %}
+
+<div id="main_content">
+
+    <!-- INDEX -->
+    <details>
+        <summary class="sum-ind">
+            <h2 id="index">INDEX:</h2>
+            <span id="click-here">
+                <img src="{{ url_for('static', filename='images/mouse_black_24dp.svg') }}" alt="click here">
+                <span class="ico-des">HERE</span>
+            </span>
+        </summary>
+        <hr class="index-ruler">
+        <ul class="index">
+            <li><a href="#boiler">Boiler Plate</a></li>
+        </ul>
+    </details>
+
+    <ol class="main_content">
+        <a name=""></a>
+        <!--  -->
+        <hr>
+        <li>
+            <div class="heading"></div>
+            <div class="discription">
+                
+            </div>
+        </li>
+
+    </ol>
+
+</div>
+
+
+
+{% endblock body %}

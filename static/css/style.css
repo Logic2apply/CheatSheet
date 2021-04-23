@@ -1,0 +1,352 @@
+/* Ubuntu */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+    --Ubuntu: 'Ubuntu', sans-serif;
+    --Roboto: 'Roboto', sans-serif;
+    --Raleway: 'Raleway', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    /* font-family: var(--Raleway); */
+}
+
+#navbar{
+    /* position: sticky;
+    top: 0%;
+    left: 0%; */
+    display: block;
+    background-color: black !important;
+    color: white;
+    margin: 0;
+    z-index: 2;
+    width: 100%;
+}
+
+.top_display{
+    display: flex;
+    text-align: center;
+    padding-top: 13px;
+    padding-bottom: 5px;
+    /* border: 2px solid red; */
+    align-items: center;
+    justify-content: center;
+
+}
+
+.logo{
+    height: 35px;
+}
+
+.title{
+    margin: 5px ;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 900;
+    font-size: 1.4rem;
+}
+
+.navigation{
+    display: block;
+    position: sticky;
+}
+
+.navigation ul{
+    margin: 5px auto;
+    display: block;
+    text-align: center;
+    position: sticky;
+    /* border: 2px solid green; */
+}
+
+.navigation ul li{
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 10px;
+    /* border: 2px solid red; */
+    list-style: none;
+}
+
+.navigation ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 5px 15px;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: var(--Roboto);
+    font-weight: 300;
+    font-size: 1.1rem;
+
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+}
+
+.navigation ul li a:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+
+}
+
+#main{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 15px auto;
+    flex-wrap: wrap;
+    
+}
+
+.Language{
+    display: flex;
+    margin: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: justify;
+    background-color: rgb(251, 246, 239);
+    border-radius: 15px;
+    padding: 25px;
+    width: 350px;
+    min-height: 500px;
+    flex-wrap: wrap;
+
+}
+
+.Language:hover{
+    background-color: rgb(255, 245, 230);
+}
+
+.lang_title{
+    font-family: var(--Roboto);
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 10px 0px;
+    color: rgb(6, 65, 90);
+    padding-bottom: 15px;
+    text-decoration: underline;
+}
+
+.lang_img,
+.lang_img img{
+    /* width: 150px; */
+    max-height: 200px;
+    width: 200px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+.cont_discription{
+    padding: 15px 0px;
+    font-weight: 500;
+    font-family: var(--Raleway);
+}
+
+
+.CheatBtn{
+    margin: 4px 0px;
+    text-decoration: none;
+    color: white;
+    font-family: var(--Ubuntu);
+    font-weight: 500;
+    font-size: 1rem;
+    background-color: black;
+    border-radius: 15px;
+    padding: 5px;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;    
+}
+
+.CheatBtn:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+
+
+/* Footer */
+footer{
+    background-color: black;
+    padding: 15px;
+    display: block;
+    color: white;
+    margin: 0px;
+    text-align: center;
+    width: 100%;
+}
+
+footer .copyright{
+    display: block;
+    color: white;
+    font-family: var(--Ubuntu);
+    font-size: 1.22rem;
+    margin: 0px auto;
+}
+
+.foot-nav{
+    display: block;
+    margin: 6px auto;
+}
+
+footer .foot-nav a{
+    text-decoration: none;
+    color: rgb(196, 196, 196);
+    margin: 5px auto;
+    padding: 0px 4px;
+    font-family: var(--Raleway);
+    font-weight: 300;
+
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+footer .foot-nav a:hover{
+    color: rgb(228, 228, 228);
+
+}
+
+
+/* Prism CSS */
+pre, code{
+    font-weight: 500;
+    max-height: 22.5rem;
+}
+
+
+.toolbar-item button{
+    border: 2px solid white !important;
+    border-radius: 25px !important;
+    color: white !important;
+    padding: 3px 13px !important;
+    font-family: var(--Raleway) !important;
+}
+
+
+/* Navigation Buttons - Up And Down */
+#up-down{
+    position: fixed;
+    bottom: 8vh;
+    right: 3.5vw;
+    /* height: 80px; */
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+#up-down .up ,
+#up-down .down{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    /* font-weight: 900; */
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    border-radius: 25px;
+    background-color: white;
+    margin: 4px 0px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+#up-down .up a , #up-down .down a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    text-decoration: none;
+    align-self: center;
+    justify-self: center;
+    /* color: black; */
+    list-style: none;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    height: 36px;
+    width: 36px;
+    border-radius: 100px;
+}
+
+#up-down img{
+    height: 36px;
+    width: 36px;
+    opacity: 0.75;
+}
+
+#up-down img:hover{
+    opacity: 1;
+}
+
+/* #up-down a:hover{
+    background-color: rgb(250, 250, 250);
+
+} */
+
+
+
+
+/* reference button */
+.refer-btn{
+    color: white;
+    background-color: black;
+    border-radius: 26px;
+    margin: 4px auto;
+    padding: 6px 10px;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    text-decoration: none;
+    text-align: center;
+    font-family: var(--Roboto);
+    font-weight: 300;
+    display: block;
+    width: 12rem;
+}
+
+.refer-btn:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+}
+
+
+
+/* Scrollbar */
+::-webkit-scrollbar{
+    width: 0.9rem;
+    background-color: rgb(255, 255, 255);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #272822;
+    border-radius: 200px;
+    border: 4px solid #ffffff;
+}
