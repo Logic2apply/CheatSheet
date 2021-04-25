@@ -34,6 +34,9 @@
             <li><a href="#box-model-mp">Box Model, Margin &amp; Padding</a></li>
             <li><a href="#float-clear">Float &amp; Clear</a></li>
             <li><a href="#sty-link-btn">Styling Links &amp; Buttons</a></li>
+            <li><a href="#display-pro">Display Property</a></li>
+            <li><a href="#position-pro">Position Property</a></li>
+            <li><a href="#visibility-z-index">Visibility &amp; z-index</a></li>
         </ul>
     </details>
 
@@ -495,7 +498,7 @@ margin: 23px 56px;
         <!-- Display Property -->
         <hr>
         <li>
-            <div class="heading">Display Property</div>
+            <div class="heading" id="display-pro">Display Property</div>
             <div class="discription">
                 <p>By inspecting both the elements in the Chrome browser, we see that the <em>image</em> is an inline element and the <em>h3</em> heading is the block element. Our objective is to bring all the elements to the center of the webpage. We can achieve it by adjusting the width of the block element i.e. the heading. The respective code of the following is-</p>
                 <pre><code class="language-css">header{
@@ -528,8 +531,100 @@ margin: 23px 56px;
             </div>
         </li>
 
-    </ol>
+        <!-- Position Property -->
+        <hr>
+        <li>
+            <div class="heading" id="position-pro">Position Property:</div>
+            <div class="discription">
+                <div class="subheading">Types Of Position Property :</div>
+                <ul>
+                    <li>Static</li>
+                    <li>Relative</li>
+                    <li>Absolute</li>
+                    <li>Fixed</li>
+                    <li>Sticky</li>
+                </ul>
 
+                <p>
+                    <pre><code class="language-css">position: static;</code></pre>
+                    <ul>
+                        <li>It is the default position of HTML elements.</li>
+                    </ul>
+                </p>
+                <p>
+                    <pre><code class="language-css">position: relative;</code></pre>
+                    <ul>
+                        <li>It is used when we need to position an HTML element relative to its normal position.</li>
+                    
+                        <li>We can set the top, right, bottom, and left properties that will cause the element to adjust away from the
+                            normal position.</li>
+                    </ul>
+                </p>
+                <p>
+                    <pre><code class="language-css">position: absolute;</code></pre>
+                    <ul>
+                        <li>An element with the absolute position will move according to the position of its parent element.</li>
+                    
+                        <li>In the absence of any parent element, the HTML element will be placed relative to the page.</li>
+                    </ul>
+                </p>
+                <p>
+                    <pre><code class="language-css">position: fixed;</code></pre>
+                    <ul>
+                        <li>An element with <em>position: fixed;</em> will remain stuck to a specific position even after the page is
+                            scrolled.</li>
+                    
+                        <li>This position property is used when we want to keep an HTML element at a fixed spot no matter where on the page
+                            the user is.</li>
+                    </ul>
+                </p>
+                <p>
+                    <pre><code class="language-css">position: sticky;</code></pre>
+                    <ul>
+                        <li>It is a hybrid of relative and fixed position.</li>
+                        <li>An HTML element with position:sticky; will just sit there until a given position offset is met.</li>
+                    </ul>
+                </p>
+            </div>
+        </li>
+
+        <!-- Visibility & z-index -->
+        <hr>
+        <li>
+            <div class="heading" id="visibility-z-index">Visibility &amp; z-index</div>
+            <div class="discription">
+                <div class="subheading">Visibility Property:</div>
+                <ul>
+                    <li>Visibility property is used to hide or show an HTML element without changing the layout of the page.</li>
+                    <li>The hidden element uses the space on the page because it is still there, but it is not visible to the user.</li>
+                </ul>
+                <div class="subheading">Difference Between <em>display: none;</em> and <em>visibility: hidden;</em></div>
+                <ul>
+                    <li><div class="alert alert-secondary">display: none; - It completely removes an HTML tag from the web page like it was never there.</div></li>
+                    <li><div class="alert alert-secondary">visibility: hidden; - It makes the tag invisible but will not remove the element, and it will still occupy the space on the page.</div></li>
+                </ul>
+
+                <div class="subheading">Z-Index Property</div>
+                <p>
+                    <strong>What if one box overlaps the other? Which box will be visible to the user?</strong>
+                </p>
+                
+                <p>
+                    This is where z-index property comes into the picture. So, whenever HTML elements collapse with each other, then the element with smaller z-index value will be covered by the element with larger z-index value.
+                </p>
+
+                <div class="alert alert-danger">
+                   <strong>Note:</strong> Z-index does not work on static position value. It only works on the elements with position: relative, absolute, fixed, or sticky.
+                </div>
+                <div class="alert alert-secondary">
+                    Let's assume we have two objects. If 1st object has more z-index than other than the other than the 1st object will overlap the other.
+                </div>
+
+            </div>
+        </li>
+
+
+    </ol>
 </div>
 
 
