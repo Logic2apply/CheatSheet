@@ -879,7 +879,38 @@ margin: 23px 56px;
     padding: 23px 45px;
     border: 2px solid black;
 }</code></pre>
+                <p>By the above code, the changes will be made only in the input form having type email.</p>
+                <p>The ::before pseudo-element can be used to insert some content before the content of an element.</p>
+                <pre><code class="language-css">header::before{
+    background: url('https://source.unsplash.com/collection/190727/1600x900') no-repeat center center/cover;
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}</code></pre>
+                <p>z-index property used here is for making the contents appear above the background image. We can make the image light by changing its opacity.</p>
+                <p>The ::after pseudo-element can be used to insert some content after the content of an element.</p>
+                <pre><code class="language-css">p::after{
+    content: "Hello world!"
+}</code></pre>
 
+                <div class="subheading">Now let us see how to use nth child pseudo selectors. Suppose, if we write-</div>
+                <pre><code class="language-css">li:nth-child(3){
+    color: cyan;
+}</code></pre>
+                <p>The above code will convert the text color to the cyan of the third only. What if we want to change the text color to red of every third element of the list. In that case, we can write-</p>
+                <pre><code class="language-css">li:nth-child(3n+3) {
+    color: red;
+}</code></pre>
+                <p>It works on the basic formula where it will convert all the items depending on the values of n starting from 0. In the same way, we can select all the even items on the list and can apply some CSS to it.</p>
+                <pre><code class="language-css">li:nth-child(even) {
+    background-color: yellow;
+}</code></pre>
+                <p>You can try more yourself by practicing with different codes and analyze the changes accordingly.</p>
             </div>
         </li>
     </ol>
