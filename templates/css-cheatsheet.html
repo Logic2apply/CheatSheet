@@ -37,6 +37,11 @@
             <li><a href="#display-pro">Display Property</a></li>
             <li><a href="#position-pro">Position Property</a></li>
             <li><a href="#visibility-z-index">Visibility &amp; z-index</a></li>
+            <li><a href="#flex-box-clip">Flexbox</a></li>
+            <li><a href="#responsive-css-units">CSS Units- em, rem, vh, vw and more</a></li>
+            <li><a href="#media-queries-css">Media Queries</a></li>
+            <li><a href="#css-selector-adv">CSS Selectors</a></li>
+            <li><a href="#attr-pseudo-nth-child">Attribute & nth child pseudo Selectors</a></li>
         </ul>
     </details>
 
@@ -531,6 +536,7 @@ margin: 23px 56px;
             </div>
         </li>
 
+
         <!-- Position Property -->
         <hr>
         <li>
@@ -588,6 +594,7 @@ margin: 23px 56px;
             </div>
         </li>
 
+
         <!-- Visibility & z-index -->
         <hr>
         <li>
@@ -624,6 +631,257 @@ margin: 23px 56px;
         </li>
 
 
+        <!-- Flexbox -->
+        <hr>
+        <li>
+            <div class="heading" id="flex-box-clip">Flexbox</div>
+            <div class="discription">
+                <p>
+                    For making a element a <em>Flexbox</em> we have to make its <strong>display: flex;</strong> and we cn see its elements will come in a line very easily and it will be took away all the hardships while using <em>floats</em>.
+                </p>
+                <pre><code class="language-css">display: flex;</code></pre>
+                <!-- flex-direction -->
+                <div class="subheading">flex-direction: ;</div>
+                <p>
+                    Flex direction property defines the direction of flex-items.
+                </p>
+                <pre><code class="language-css">direction: row; /* (Default value of flex-direction is row) */</code></pre>
+                <pre><code class="language-css">flex-direction: column;</code></pre>
+                <pre><code class="language-css">flex-direction: row-reverse;</code></pre>
+                <pre><code class="language-css">flex-direction: column-reverse; </code></pre>
+
+                <!-- flex-wrap -->
+                <div class="subheading">flex-wrap: ;</div>
+                <p>
+                    Specifies weather to wrap flex items or not.
+                </p>
+                <pre><code class="language-css">flex-wrap: no-wrap; /* (Default value of flex-direction is no-wrap) */</code></pre>
+                <pre><code class="language-css">flex-wrap: wrap; /* Wraps flex items starting from last */</code></pre>
+                <pre><code class="language-css">flex-wrap: wrap-reverse; /* Wraps flex items starting from first */</code></pre>
+
+                <!-- shorthand for flex-direction: ; and flex-wrap: ; -->
+                <div class="subheading"><em>flex-flow: ;</em> Shorthand for flex-direction: ; and flex-wrap: ;</div>
+                <pre><code class="language-css">flex-flow: row-reverse wrap; </code></pre>
+
+                <!-- justify-content: ; -->
+                <div class="subheading">justify-content: ;</div>
+                <p>
+                    justify-content will justify the content in horizontal direction.
+                </p>
+                <pre><code class="language-css">justify-content: center;</code></pre>
+                <pre><code class="language-css">justify-content: space-between;</code></pre>
+                <pre><code class="language-css">justify-content: space-evenly;</code></pre>
+                <pre><code class="language-css">justify-content: space-around;</code></pre>
+
+                <!-- align-items: ; -->
+                <div class="subheading">align-items: ;</div>
+                <p>
+                    align-items will justify the content in vertical direction.
+                </p>
+                <pre><code class="language-css">align-items: center;</code></pre>
+                <pre><code class="language-css">align-items: flex-end;</code></pre>
+                <pre><code class="language-css">align-items: flex-start;</code></pre>
+                <pre><code class="language-css">align-items: stretch;</code></pre>
+
+                <!-- Flex properties for a flex items  -->
+                <!-- order property -->
+                <h2>Flex properties for a flex item</h2>
+                <div class="subheading">order: ;</div>
+                <p>
+                    Higher the order, later it shows up in the container.
+                </p>
+                <pre><code class="language-css">order: 2;</code></pre>
+
+                <!-- flex-grow: ; | flex-shrink: ; -->
+                <div class="subheading">flex-grow: ; | flex-shrink: ;</div>
+                <pre><code class="language-css">flex-grow: ;</code></pre>
+                <p>
+                    Higher the value of flex-grow the flex item will grow or expand more.
+                </p>
+
+                <pre><code class="language-css">flex-shrink: ;</code></pre>
+                <p>
+                    Higher the value of flex-shrink the flex item will shrink more.
+                </p>
+
+                <div class="subheading">flex-basis: ;</div>
+                <pre><code class="language-css">flex-basis: 100px;</code></pre>
+                <div class="alert alert-secondary"><strong>NOTE:</strong> When flex-direction is set to row flex-basis: will control width.</div>
+                <div class="alert alert-secondary"><strong>NOTE:</strong> When flex-direction is set to column flex-basis: will control height.</div>
+
+                <!-- Flex shorthand for flex-grow flex-shrink flex-basis -->
+                <div class="subheading">flex: ;</div>
+                <pre><code class="language-css">flex: 2 2 345px; /* flex-grow flex-shrink flex-basis */</code></pre>
+                <p>A shorthand property for flex-grow flex-shrink and flex-basis as <em><strong>flex: ;</strong></em></p>
+
+                <!-- align-self & justify-self -->
+                <div class="subheading">align-self &amp; justify-self</div>
+                <p>
+                    If we apply <strong>align-self</strong> &amp; <strong>justify-self</strong> on an item then the item will show up its own property.
+                </p>
+                <p>
+                    Their attributes are same like of <em>justify-content</em> &amp; <em>align-items</em> respectively.
+                </p>
+
+                <!-- flexbox end -->
+
+            </div>
+        </li>
+
+
+        <!-- css units -->
+        <hr>
+        <li>
+            <div class="heading" id="responsive-css-units">Responsive Designs using CSS Units</div>
+            <div class="discription">
+                <h3>What Is Responsive Design?</h3>
+                <p>
+                    Have you ever noticed that websites nowadays adjust themselves according to the resolution of your device (Smartphone, tablet, or desktop computer)? Isn't it amazing that a website is automatically changing its height and width according to the size of the user's screen? This is possible because of the responsive design. Let's dive deep into responsive design.
+                </p>
+                <ul>
+                    <li>Responsive design is a way for a web developer to make a website adapt to all the devices and resolutions.</li>
+                    <li>Endless new resolutions and devices are challenging to support separately for a web developer; therefore, responsive design is the best approach to develop a website that can adjust itself according to the screen size.</li>
+                    <li>Responsive design is a necessity and not a luxury anymore!</li>
+                </ul>
+                <h3>Various Ways To Achieve Responsive Design :</h3>
+                <ol>
+                    <li>By using rem/vh/vw units over pixels.</li>
+                    <li>By using max-width/max-height.</li>
+                    <li>Using CSS Media Queries.</li>
+                    <li>Setting up the viewport.</li>
+                </ol>
+                <div class="subheading">em</div>
+                <pre><code class="language-css">font-size: 1em</code></pre>
+                <ul>
+                    <li>Font-sizes are inherited relative to the parent element.</li>
+                    <li>10em means ten times of the parent element.</li>
+                </ul>
+                <div class="subheading">rem</div>
+                <pre><code class="language-css">font-size: 1rem</code></pre>
+                <ul>
+                    <li>Font-size gets set according to the font-size of the root element.</li>
+                    <li>In general, &lt;html&gt; is the root element.</li>
+                    <li>In rem, "r" stands for "root."</li>
+                </ul>
+                <div class="subheading">vh</div>
+                <pre><code class="language-css">height: 1vh</code></pre>
+                <ul>
+                    <li>It stands for viewport height.</li>
+                    <li>vh is equal to the 1/100 times of the viewport height.</li>
+                    <li>Example: Suppose height of the browser is 1000px, so 1vh is equaled to (1/100)*1000= 10px.</li>
+                </ul>
+                <div class="subheading">vw</div>
+                <pre><code class="language-css">width: 1vw</code></pre>
+                <ul>
+                    <li>It stands for viewport width.</li>
+                    <li>Similar to vh, vw is equal to the 1/100 times of the viewport width.</li>
+                    <li>Example: Suppose width of the browser is 1000px, so 1vw is equaled to (1/100)*1000= 10px.</li>
+                </ul>
+                <a href="https://www.w3schools.com/cssref/css_units.asp" class="refer-btn">Refer Here &rarr;</a>
+            </div>
+        </li>
+
+
+        <!-- Media Queries -->
+        <hr>
+        <li>
+            <div class="heading" id="media-queries-css">Media Queries</div>
+            <div class="discription">
+                <h3>What Is Media Query?</h3>
+                <ul>
+                    <li>Media queries are used when we want to customize our website's presentation according to the user's screen size. With the help of media queries, you can display different markups based upon the device's general type(mobile, desktop, tablet).</li>
+                    <li>A media query is a logical operation. Whenever a media query becomes true, then the related CSS is applied to the target element.</li>
+                </ul>
+                <h4>Syntax of Media Queries</h4>
+                <p>
+                    A media query is composed of two things: media type and expression. A media query can contain one or more expressions. 
+                </p>
+                <pre><code class="language-css">@media media-type and (media-feature){
+    /* CSS Rules to be applies*/
+}</code></pre>
+
+                <pre><code class="language-css">@media screen and (max-width: 800px){
+    #contents{
+        width:90%
+    }
+}</code></pre>
+                <div class="subheading">Let's understand this with this-</div>
+                <ul>
+                    <li>@media: A media query always starts with @media.</li>
+                    <li>Screen: It is the applicable media type.</li>
+                    <li>max-width: It is the media feature. </li>
+                    <li>#contents{width:90%} : It is the CSS to be applied when the conditions are met.</li>
+                </ul>
+                <a href="https://www.w3schools.com/css/css3_mediaqueries.asp" class="refer-btn">Refer Media types&rarr;</a>
+            </div>
+        </li>
+
+
+        <!-- CSS Selectors -->
+        <hr>
+        <li>
+            <div class="heading" id="css-selector-adv">CSS Selectors</div>
+            <div class="discription">
+                <pre><code class="language-css">element element{
+    background-color: white;
+}</code></pre>
+                <p>
+                    Applies CSS to all the <span class="code">&lt;p&gt;</span> inside <span class="code">&lt;div&gt;</span> whether it is direct child or not.
+                </p>
+                <pre><code class="language-css">element>element{
+    background-color: white;
+}</code></pre>
+                <p>
+                    Applies CSS to all the <span class="code">&lt;p&gt;</span> inside <span class="code">&lt;div&gt;</span> which is a direct child of <span class="code">&lt;div&gt;</span>.
+                </p>
+                <pre><code class="language-css">element+element{
+    background-color: white;
+}</code></pre>
+                <p>
+                    There might be situations where you want to select the <span class="code">&lt;p&gt;</span> tags that are immediately after the <span class="code">&lt;div&gt;</span> elements. In such cases, we use the div+p.
+                </p>
+            </div>
+        </li>
+
+
+        <!-- Attribute & nth child pseudo Selectors -->
+        <hr>
+        <li>
+            <div class="heading" id="attr-pseudo-nth-child">Attribute & nth child pseudo Selectors</div>
+            <div class="discription">
+                <h4>Some pseudo Selectors discussed above-</h4>
+                <div class="subheading">:hover</div>
+                <pre><code class="language-css">.refer-btn:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+}</code></pre>
+                <p>The next Pseudo selector is Visited. As soon as you visit the anchor tag button and click the link mentioned, it changes its color. To apply this property, write the code as follows-</p>
+                <pre><code class="language-css">a:visited{
+    background-color: cornsilk;
+    color: rgb(6, 56, 73);
+}</code></pre>
+                <p>The next selector is Active. If you visit any button, and click it, it becomes active and showcases with different properties. The code for this is-</p>
+                <pre><code class="language-css">a:active{
+    background-color: rgb(0, 0, 0);
+    color: rgb(193, 239, 255);
+    border-radius: 25px;
+}</code></pre>
+
+                <p>To select the input of type text only, we will write the following code-</p>
+                <pre><code class="language-css">input[type='text'] {
+    padding: 23px;
+    border: 2px solid red;
+}</code></pre>
+                <p>By the above code, the changes will be made only in the input form having type text.</p>
+                <p>With the help of pseudo selectors, we can target different properties by their attributes. In the same way, if we want to target our email tab, then we can write the code as follows and can apply some property to it-</p>
+                <pre><code class="language-css">input[type='email'] {
+    padding: 23px 45px;
+    border: 2px solid black;
+}</code></pre>
+
+            </div>
+        </li>
     </ol>
 </div>
 

@@ -329,12 +329,12 @@ pre, code{
     font-weight: 300;
     display: block;
     width: 12rem;
+    border: 2px solid black;
 }
 
 .refer-btn:hover{
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
-    border: 2px solid black;
 }
 
 
